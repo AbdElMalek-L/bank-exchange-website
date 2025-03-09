@@ -1,4 +1,3 @@
-
 import { 
   DollarSign, 
   CreditCard, 
@@ -32,7 +31,7 @@ export const EXCHANGE_SERVICES: ExchangeService[] = [
     id: "payeer",
     name: "Payeer",
     arabicName: "باير",
-    icon: CreditCard,
+    icon: Wallet,
     description: "Fast online payment system",
     arabicDescription: "نظام دفع إلكتروني سريع"
   },

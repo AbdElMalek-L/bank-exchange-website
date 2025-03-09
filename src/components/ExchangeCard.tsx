@@ -46,28 +46,31 @@ const ExchangeCard = ({ service, index }: ExchangeCardProps) => {
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="flex items-start justify-between mb-4">
-        <div className="bg-primary/10 p-2 rounded-full">
-          <Icon size={24} className="text-primary" />
+        <div className="bg-primary/10 p-3 rounded-full">
+          <Icon size={28} className="text-primary" />
         </div>
         <div className="text-primary/90 flex items-center">
-          <Check size={16} className="mr-1" /> <span className="text-sm">متوفر</span>
+          <Check size={16} className="mr-1" /> <span className="text-sm">Available</span>
         </div>
       </div>
       
       <h3 className="text-xl font-semibold mb-2 flex flex-col">
-        <span className="text-right">{service.arabicName || service.name}</span>
-        <span className="text-sm text-muted-foreground">{service.name}</span>
+        <span>{service.name}</span>
+        {service.arabicName && (
+          <span className="text-sm text-muted-foreground text-right">{service.arabicName}</span>
+        )}
       </h3>
       
-      {(service.arabicDescription || service.description) && (
-        <p className="text-muted-foreground text-sm text-right" dir="rtl">
-          {service.arabicDescription || service.description}
+      {service.description && (
+        <p className="text-muted-foreground text-sm">
+          {service.description}
         </p>
       )}
       
       <div className="mt-4 pt-4 border-t border-border">
-        <button className="text-primary font-medium text-sm flex items-center hover:text-primary/80 transition-colors">
-          <span className="ml-auto text-right">تبادل الآن</span>
+        <button className="text-primary font-medium text-sm flex items-center justify-between w-full hover:text-primary/80 transition-colors">
+          <span>Exchange Now</span>
+          <span className="text-right text-xs text-muted-foreground">تبادل الآن</span>
         </button>
       </div>
     </div>

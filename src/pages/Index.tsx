@@ -43,9 +43,9 @@ const Index = () => {
       <section className="py-20 px-6" id="services">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12 animate-on-scroll opacity-0">
-            <h2 className="text-3xl font-bold mb-4">خدمات التبادل لدينا</h2>
-            <p className="text-muted-foreground" dir="rtl">
-              نوفر خدمات تبادل لجميع وسائل الدفع الإلكترونية الرئيسية
+            <h2 className="text-3xl font-bold mb-4">Our Exchange Services</h2>
+            <p className="text-muted-foreground">
+              We provide exchange services for all major digital payment methods
             </p>
           </div>
           
@@ -61,9 +61,9 @@ const Index = () => {
       <section className="py-20 px-6 bg-muted/30" id="how-it-works">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12 animate-on-scroll opacity-0">
-            <h2 className="text-3xl font-bold mb-4">كيف تعمل الخدمة</h2>
-            <p className="text-muted-foreground" dir="rtl">
-              عملية تبادل بسيطة وآمنة في بضع خطوات فقط
+            <h2 className="text-3xl font-bold mb-4">How It Works</h2>
+            <p className="text-muted-foreground">
+              Simple and secure exchange process in just a few steps
             </p>
           </div>
           
@@ -71,18 +71,24 @@ const Index = () => {
             {[
               {
                 icon: <Check size={24} className="text-primary" />,
-                title: "اختر الخدمة",
-                description: "اختر وسيلة الدفع الإلكترونية التي تريد تبادلها."
+                title: "Choose Service",
+                arabicTitle: "اختر الخدمة",
+                description: "Select the digital payment method you want to exchange.",
+                arabicDescription: "اختر وسيلة الدفع الإلكترونية التي تريد تبادلها."
               },
               {
                 icon: <RefreshCw size={24} className="text-primary" />,
-                title: "حدد المبلغ",
-                description: "أدخل المبلغ الذي ترغب في تبادله واحصل على عرض أسعار."
+                title: "Set Amount",
+                arabicTitle: "حدد المبلغ",
+                description: "Enter the amount you want to exchange and get a quote.",
+                arabicDescription: "أدخل المبلغ الذي ترغب في تبادله واحصل على عرض أسعار."
               },
               {
                 icon: <ShieldCheck size={24} className="text-primary" />,
-                title: "أكمل التبادل",
-                description: "قم بإنهاء التبادل بشكل آمن واستلم التأكيد."
+                title: "Complete Exchange",
+                arabicTitle: "أكمل التبادل",
+                description: "Finalize the exchange securely and receive confirmation.",
+                arabicDescription: "قم بإنهاء التبادل بشكل آمن واستلم التأكيد."
               }
             ].map((step, index) => (
               <div 
@@ -93,12 +99,13 @@ const Index = () => {
                 <div className="bg-primary/10 p-3 rounded-full w-fit mb-6">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-right">{step.title}</h3>
-                <p className="text-muted-foreground text-right" dir="rtl">{step.description}</p>
+                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                <p className="text-muted-foreground">{step.description}</p>
                 
                 <div className="mt-6 pt-4 border-t border-border">
-                  <button className="text-primary font-medium flex items-center hover:text-primary/80 transition-colors">
-                    <span className="ml-auto text-right">تعلم المزيد</span> <ArrowRight size={16} className="ml-1 transform rotate-180" />
+                  <button className="text-primary font-medium flex items-center justify-between w-full hover:text-primary/80 transition-colors">
+                    <span className="flex items-center">Learn More <ArrowRight size={16} className="ml-1" /></span>
+                    <span className="text-xs text-muted-foreground text-right">{step.arabicTitle}</span>
                   </button>
                 </div>
               </div>
