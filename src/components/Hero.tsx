@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Wallet, CreditCard, ArrowLeftRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   const animatedDivRef = useRef<HTMLDivElement>(null);
@@ -34,7 +34,7 @@ const Hero = () => {
       
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div ref={animatedDivRef} className="opacity-0 transition-opacity duration-500">
-          <div className="space-y-2 mb-6">
+          <div className="space-y-4 mb-8">
             <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-foreground">
               بيع و شراء
               <br />
@@ -45,59 +45,9 @@ const Hero = () => {
             </p>
           </div>
           
-          <div className="max-w-md">
-            <div className="glass rounded-xl p-8 shadow-lg">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-2">
-                  <Wallet className="text-primary" size={20} />
-                  <span className="font-medium">Exchange Service</span>
-                </div>
-                <div className="bg-primary/10 text-primary text-sm py-1 px-2 rounded-full">
-                  Premium
-                </div>
-              </div>
-              
-              <div className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-muted-foreground mb-1">
-                    You Send
-                  </label>
-                  <div className="flex items-center">
-                    <input 
-                      type="text" 
-                      placeholder="1,000.00" 
-                      className="flex-1 bg-transparent text-2xl font-semibold focus:outline-none"
-                    />
-                    <div className="text-primary font-medium">USD</div>
-                  </div>
-                </div>
-                
-                <div className="flex justify-center">
-                  <div className="bg-primary/10 p-2 rounded-full">
-                    <ArrowLeftRight size={20} className="text-primary" />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-muted-foreground mb-1">
-                    You Receive
-                  </label>
-                  <div className="flex items-center">
-                    <input 
-                      type="text" 
-                      placeholder="9,500.00" 
-                      className="flex-1 bg-transparent text-2xl font-semibold focus:outline-none"
-                    />
-                    <div className="text-primary font-medium">MAD</div>
-                  </div>
-                </div>
-                
-                <button className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
-                  Exchange Now <ArrowRight size={16} />
-                </button>
-              </div>
-            </div>
-          </div>
+          <button className="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+            Get Started <ArrowRight size={16} />
+          </button>
         </div>
         
         <div className="relative aspect-square md:aspect-auto">
@@ -114,7 +64,6 @@ const Hero = () => {
             
             <div className="absolute bottom-0 left-0 right-0 glass p-4 backdrop-blur-md">
               <div className="flex items-center gap-2">
-                <CreditCard size={20} className="text-primary" />
                 <span className="font-medium">Secure Digital Exchange</span>
               </div>
             </div>
