@@ -11,6 +11,7 @@ const Hero = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("animate-fade-in");
+          entry.target.classList.remove("opacity-0");
         }
       },
       { threshold: 0.1 }
@@ -32,7 +33,7 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-primary/5 to-transparent opacity-70"></div>
       
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div ref={animatedDivRef} className="opacity-0">
+        <div ref={animatedDivRef} className="opacity-0 transition-opacity duration-500">
           <div className="space-y-2 mb-6">
             <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-foreground">
               بيع و شراء
@@ -107,9 +108,8 @@ const Hero = () => {
             <img 
               src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&q=80&w=1000"
               alt="Digital Exchange" 
-              className="w-full h-auto rounded-2xl opacity-0 animate-fade-in"
-              style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}
-              onLoad={(e) => (e.target as HTMLImageElement).classList.add('opacity-100')}
+              className="w-full h-auto rounded-2xl opacity-100"
+              style={{ animationFillMode: 'forwards' }}
             />
             
             <div className="absolute bottom-0 left-0 right-0 glass p-4 backdrop-blur-md">
