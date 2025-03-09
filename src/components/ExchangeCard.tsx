@@ -50,19 +50,24 @@ const ExchangeCard = ({ service, index }: ExchangeCardProps) => {
           <Icon size={24} className="text-primary" />
         </div>
         <div className="text-primary/90 flex items-center">
-          <Check size={16} className="mr-1" /> Available
+          <Check size={16} className="mr-1" /> <span className="text-sm">متوفر</span>
         </div>
       </div>
       
-      <h3 className="text-xl font-semibold mb-2">{service.name}</h3>
+      <h3 className="text-xl font-semibold mb-2 flex flex-col">
+        <span className="text-right">{service.arabicName || service.name}</span>
+        <span className="text-sm text-muted-foreground">{service.name}</span>
+      </h3>
       
-      {service.description && (
-        <p className="text-muted-foreground text-sm">{service.description}</p>
+      {(service.arabicDescription || service.description) && (
+        <p className="text-muted-foreground text-sm text-right" dir="rtl">
+          {service.arabicDescription || service.description}
+        </p>
       )}
       
       <div className="mt-4 pt-4 border-t border-border">
         <button className="text-primary font-medium text-sm flex items-center hover:text-primary/80 transition-colors">
-          Exchange now
+          <span className="ml-auto text-right">تبادل الآن</span>
         </button>
       </div>
     </div>

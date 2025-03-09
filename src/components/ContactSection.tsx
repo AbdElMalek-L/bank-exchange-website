@@ -1,16 +1,16 @@
 
 import React from "react";
 import { Phone, Building, CreditCard } from "lucide-react";
-import { CONTACT_NUMBER, PAYMENT_METHODS } from "@/lib/constants";
+import { CONTACT_NUMBER, PAYMENT_METHODS, ARABIC_PAYMENT_METHODS } from "@/lib/constants";
 
 const ContactSection = () => {
   return (
     <section className="py-20 px-6 bg-muted/50" id="contact">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
-          <p className="text-muted-foreground">
-            Get in touch with our team for any inquiries or to process your exchange.
+          <h2 className="text-3xl font-bold mb-4">اتصل بنا</h2>
+          <p className="text-muted-foreground" dir="rtl">
+            تواصل مع فريقنا لأي استفسارات أو لتنفيذ عملية التبادل الخاصة بك.
           </p>
         </div>
         
@@ -21,20 +21,20 @@ const ContactSection = () => {
                 <Phone size={24} className="text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-xl">Contact Information</h3>
-                <p className="text-muted-foreground">Reach out to us directly</p>
+                <h3 className="font-semibold text-xl">معلومات الاتصال</h3>
+                <p className="text-muted-foreground">تواصل معنا مباشرة</p>
               </div>
             </div>
             
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <Phone size={20} className="text-primary" />
-                <span className="font-medium text-lg">{CONTACT_NUMBER}</span>
+                <span className="font-medium text-lg" dir="ltr">{CONTACT_NUMBER}</span>
               </div>
               
               <div className="bg-muted/50 rounded-lg p-4 border border-border">
-                <p className="text-sm text-muted-foreground">
-                  Our team is available to assist you with any questions or to process your exchange requests.
+                <p className="text-sm text-muted-foreground text-right" dir="rtl">
+                  فريقنا متاح لمساعدتك في أي أسئلة أو لمعالجة طلبات التبادل الخاصة بك.
                 </p>
               </div>
             </div>
@@ -46,8 +46,8 @@ const ContactSection = () => {
                 <CreditCard size={24} className="text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-xl">Payment Methods</h3>
-                <p className="text-muted-foreground">Multiple options available</p>
+                <h3 className="font-semibold text-xl">طرق الدفع</h3>
+                <p className="text-muted-foreground">خيارات متعددة متاحة</p>
               </div>
             </div>
             
@@ -62,7 +62,10 @@ const ContactSection = () => {
                   ) : (
                     <CreditCard size={20} className="text-primary" />
                   )}
-                  <span className="font-medium">{method}</span>
+                  <span className="font-medium">
+                    <span className="text-right block" dir="rtl">{ARABIC_PAYMENT_METHODS[index]}</span>
+                    <span className="text-xs text-muted-foreground">{method}</span>
+                  </span>
                 </div>
               ))}
             </div>
