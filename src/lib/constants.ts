@@ -1,6 +1,5 @@
-
 import { 
-  Dollar, 
+  DollarSign, 
   CreditCard, 
   Wallet, 
   Banknote, 
@@ -21,7 +20,7 @@ export const EXCHANGE_SERVICES: ExchangeService[] = [
   {
     id: "paypal",
     name: "PayPal",
-    icon: Dollar,
+    icon: DollarSign,
     description: "Send and receive money internationally"
   },
   {
