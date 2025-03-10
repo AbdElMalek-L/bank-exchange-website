@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12">
           <div>
             <div className="font-bold text-2xl text-primary mb-4">
-              Exchange<span className="text-foreground">Pay</span>
+            Bank<span className="text-foreground">xchange</span>
             </div>
             <p className="text-muted-foreground max-w-md">
               Professional service for buying, selling, and exchanging electronic balances.
@@ -55,7 +55,7 @@ const Footer = () => {
         
         <div className="border-t border-border mt-10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-muted-foreground mb-4 md:mb-0">
-            © {currentYear} ExchangePay. All rights reserved.
+            © {currentYear} Bankxchange. All rights reserved.
           </div>
           <div className="text-muted-foreground text-sm">
             Designed with precision and elegance.

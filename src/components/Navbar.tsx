@@ -35,7 +35,7 @@ const Navbar = () => {
             href="#" 
             className="font-bold text-2xl text-primary tracking-tight"
           >
-            Exchange<span className="text-foreground">Pay</span>
+            Bank<span className="text-foreground">xchange</span>
           </a>
         </div>
 
